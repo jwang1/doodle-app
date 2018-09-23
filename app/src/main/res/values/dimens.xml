@@ -4,4 +4,6 @@
     <dimen name="activity_vertical_margin">10</dimen>
     <dimen name="activity_horizontal_margin">5</dimen>
     <dimen name="color_chooser_max_val">250</dimen>
+    <dimen name="line_imageview_height">100</dimen>
+    <dimen name="max_stroke_width">50</dimen>
 </resources>
