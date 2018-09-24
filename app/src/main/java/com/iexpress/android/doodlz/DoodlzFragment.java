@@ -138,6 +138,7 @@ public class DoodlzFragment extends Fragment {
             case R.id.color:
                 ColorDialogFragment colorDialogFragment = new ColorDialogFragment();
                 colorDialogFragment.show(getFragmentManager(), "Color Dialog");
+                // consume menu event
                 return true;
             case R.id.line_width:
                 LineWidthDialogFragment lineWidthDialogFragment = new LineWidthDialogFragment();

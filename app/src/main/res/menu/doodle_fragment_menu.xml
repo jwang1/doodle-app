@@ -32,7 +32,7 @@
 
     <item
         android:id="@+id/print"
-        android:title="@string/menuitem_line_width"
+        android:title="@string/menuitem_print"
         android:icon="@drawable/ic_print_24dp"
         app:showAsAction="ifRoom">
     </item>

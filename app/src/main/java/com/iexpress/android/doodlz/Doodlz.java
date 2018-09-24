@@ -32,6 +32,7 @@ public class Doodlz extends AppCompatActivity {
         }
     }
 
+    /* Should be in DoodlezFragment
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -53,5 +54,6 @@ public class Doodlz extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    */
 
 }
