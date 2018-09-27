@@ -1,90 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/colorDialogGridLayout"
-    android:columnCount="2"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:columnCount="2">
 
     <TextView
         android:id="@+id/alphaTextView"
-        android:layout_column="0"
-        android:layout_gravity="right|center_vertical"
-        android:layout_row="0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_alpha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/label_alpha" />
 
     <SeekBar
         android:id="@+id/alphaSeekBar"
-        android:layout_column="1"
-        android:layout_gravity="fill_horizontal"
-        android:layout_row="0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="@dimen/seekerbar_width"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:max="@integer/seekerbar_max_value"
+        android:progress="@integer/seekerbar_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintStart_toEndOf="@+id/alphaTextView"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/redTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_row="1"
-        android:layout_gravity="right|center_vertical"
-        android:text="TextView"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alphaTextView"
         tools:text="@string/label_red" />
 
     <SeekBar
         android:id="@+id/redSeekBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_row="1"
-        android:layout_gravity="fill_horizontal" />
+        android:layout_width="@dimen/seekerbar_width"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:max="@integer/seekerbar_max_value"
+        android:progress="@integer/seekerbar_progress"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.241"
+        app:layout_constraintStart_toEndOf="@+id/redTextView"
+        app:layout_constraintTop_toBottomOf="@+id/alphaSeekBar" />
 
     <TextView
         android:id="@+id/greenTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_row="2"
-        android:layout_gravity="right|center_vertical"
-        android:text="TextView"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/label_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/redTextView"
         tools:text="@string/label_green" />
 
     <SeekBar
         android:id="@+id/greenSeekBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_row="2"
-        android:layout_gravity="fill_horizontal"/>
+        android:layout_width="@dimen/seekerbar_width"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:max="@integer/seekerbar_max_value"
+        android:progress="@integer/seekerbar_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toEndOf="@+id/greenTextView"
+        app:layout_constraintTop_toBottomOf="@+id/redSeekBar" />
 
     <TextView
         android:id="@+id/blueTextView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_row="3"
-        android:layout_gravity="right|center_vertical"
-        android:text="TextView"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/label_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greenTextView"
         tools:text="@string/label_blue" />
 
     <SeekBar
         android:id="@+id/blueSeekBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_row="3"
-        android:layout_gravity="fill_horizontal"/>
+        android:layout_width="@dimen/seekerbar_width"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:max="@integer/seekerbar_max_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toEndOf="@+id/blueTextView"
+        app:layout_constraintTop_toBottomOf="@+id/greenSeekBar" />
 
     <View
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
         android:id="@+id/colorView"
-        android:layout_column="0"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill_horizontal"/>
+        android:layout_width="381dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blueTextView"
+        app:layout_constraintVertical_bias="0.53" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
 
 </android.support.constraint.ConstraintLayout>
