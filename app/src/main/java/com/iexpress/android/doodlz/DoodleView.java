@@ -39,7 +39,7 @@ public class DoodleView extends View {
         // set the initial display settings for the painted line
         paintLine = new Paint();
         paintLine.setAntiAlias(true); // smooth edges of drawn line
-        paintLine.setColor(Color.BLACK); // default color is black
+        paintLine.setColor(Color.WHITE); // default color is black
         paintLine.setStyle(Paint.Style.STROKE); // solid line
         paintLine.setStrokeWidth(5); // set the default line width
         paintLine.setStrokeCap(Paint.Cap.ROUND); // rounded line ends
@@ -51,14 +51,15 @@ public class DoodleView extends View {
         bitmap = Bitmap.createBitmap(getWidth(), getHeight(),
                 Bitmap.Config.ARGB_8888);
         bitmapCanvas = new Canvas(bitmap);
-        bitmap.eraseColor(Color.WHITE); // erase the Bitmap with white
+
+        bitmap.eraseColor(Color.BLACK); // erase the Bitmap with white
     }
 
     // clear the painting
     public void clear() {
         pathMap.clear(); // remove all paths
         previousPointMap.clear(); // remove all previous points
-        bitmap.eraseColor(Color.WHITE); // clear the bitmap
+        bitmap.eraseColor(Color.BLACK); // clear the bitmap
         invalidate(); // refresh the screen
     }
 
