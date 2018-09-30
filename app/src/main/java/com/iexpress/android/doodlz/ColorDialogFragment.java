@@ -26,6 +26,9 @@ public class ColorDialogFragment extends DialogFragment{
                 new AlertDialog.Builder(getActivity());
         View colorDialogView = getActivity().getLayoutInflater().inflate(
                 R.layout.fragment_color, null);
+
+        colorDialogView.setBackgroundColor(Color.BLACK);
+
         builder.setView(colorDialogView); // add GUI to dialog
 
         // set the AlertDialog's message

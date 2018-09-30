@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -25,6 +26,9 @@ public class LineWidthDialogFragment extends DialogFragment {
         View lineWidthDialogView =
                 getActivity().getLayoutInflater().inflate(
                         R.layout.fragment_line_width, null);
+
+        lineWidthDialogView.setBackgroundColor(Color.BLACK);
+
         builder.setView(lineWidthDialogView); // add GUI to dialog
 
         // set the AlertDialog's message
