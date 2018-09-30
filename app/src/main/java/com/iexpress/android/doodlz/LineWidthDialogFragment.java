@@ -22,7 +22,7 @@ public class LineWidthDialogFragment extends DialogFragment {
     public Dialog onCreateDialog(Bundle bundle) {
         // create the dialog
         AlertDialog.Builder builder =
-                new AlertDialog.Builder(getActivity());
+                new AlertDialog.Builder(getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_DARK);
         View lineWidthDialogView =
                 getActivity().getLayoutInflater().inflate(
                         R.layout.fragment_line_width, null);

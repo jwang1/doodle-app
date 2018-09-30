@@ -23,7 +23,7 @@ public class ColorDialogFragment extends DialogFragment{
     public Dialog onCreateDialog(Bundle bundle) {
         // create dialog
         AlertDialog.Builder builder =
-                new AlertDialog.Builder(getActivity());
+                new AlertDialog.Builder(getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_DARK);
         View colorDialogView = getActivity().getLayoutInflater().inflate(
                 R.layout.fragment_color, null);
 

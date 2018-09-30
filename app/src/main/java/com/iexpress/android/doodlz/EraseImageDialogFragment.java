@@ -13,7 +13,7 @@ public class EraseImageDialogFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle bundle) {
         AlertDialog.Builder builder =
-                new AlertDialog.Builder(getActivity());
+                new AlertDialog.Builder(getActivity(), AlertDialog.THEME_HOLO_DARK);
 
         // set the AlertDialog's message
         builder.setMessage(R.string.message_erase);
